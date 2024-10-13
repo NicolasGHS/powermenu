@@ -23,22 +23,17 @@ then
     betterlockscreen --lock
 elif [ "$selected_option" == "$logout" ]
 then
-    # loginctl terminate-user `whoami`
-    echo "logout"
+    loginctl terminate-user `whoami`
 elif [ "$selected_option" == "$shutdown" ]
 then
-    # mpv ~/Music/alaram/shutdown.mp3 &
-    # doas systemctl poweroff
-    echo "shutdown"
+    doas systemctl poweroff
 elif [ "$selected_option" == "$reboot" ]
 then
-   # doas systemctl reboot
-   echo "reboot"
+   doas systemctl reboot
 elif [ "$selected_option" == "$sleep" ]
 then
-    # amixer set Master mute
-    # doas systemctl suspend
-    echo "sleep"
+    amixer set Master mute
+    doas systemctl suspend
 else
     echo "No match"
 fi
