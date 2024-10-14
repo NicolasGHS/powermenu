@@ -26,7 +26,7 @@ then
     loginctl terminate-user `whoami`
 elif [ "$selected_option" == "$shutdown" ]
 then
-    doas systemctl poweroff
+    sudo systemctl poweroff
 elif [ "$selected_option" == "$reboot" ]
 then
    doas systemctl reboot
