@@ -20,7 +20,7 @@ $shutdown" | rofi -dmenu\
 # return based on selected option
 if [ "$selected_option" == "$lock" ]
 then
-    betterlockscreen --lock
+    betterlockscreen --lock 
 elif [ "$selected_option" == "$logout" ]
 then
     loginctl terminate-user `whoami`
